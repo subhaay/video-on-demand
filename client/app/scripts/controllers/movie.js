@@ -8,10 +8,7 @@
  * Controller of the videoServiceApp
  */
 angular.module('videoServiceApp')
-  .controller('MovieCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MovieCtrl', function ($scope) {
+    $scope.movie = "https://www.youtube.com/watch?v=JXzswyfFg70";
+
   });
