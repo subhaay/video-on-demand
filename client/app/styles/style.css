@@ -602,7 +602,7 @@ body {
   margin-top: 23px;
   color:#888;
   overflow: hidden;
-  width: 40%;
+  width: 90%;
   display: block;
   font-family: 'gandhi_sansregular';
 }
@@ -613,7 +613,7 @@ body {
   outline:none;
   color: #888;
   border: 1px solid rgba(192, 192, 192, 0.22);
-  width:70%;
+  width:95%;
   height:100px;
   resize: none;
 }
@@ -707,7 +707,7 @@ body {
 .contact-form input[type="text"],.contact-form textarea{
   padding:8px;
   display:block;
-  width:98%;
+  width:95%;
   border: none;
   outline:none;
   color:#464646;
@@ -794,19 +794,19 @@ body {
     width:100%;
   }
   .span_2_of_3 {
-    width:94%;
+    width:100%;
     padding:3%;
   }
   .col{
     margin: 1% 0 1% 0%;
   }
   .span_1_of_3 {
-    width:94%;
+    width:100%;
     padding:3%;
   }
 
   .contact-form input[type="text"],.contact-form textarea{
-    width:97%;
+    width:95%;
   }
 }
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
@@ -816,18 +816,18 @@ body {
     width:100%;
   }
   .span_2_of_3 {
-    width:90%;
+    width:100%;
     padding:5%;
   }
   .col {
     margin: 1% 0 1% 0%;
   }
   .span_1_of_3 {
-    width:90%;
+    width:100%;
     padding:5%;
   }
   .contact-form input[type="text"],.contact-form textarea{
-    width:92%;
+    width:95%;
   }
 }
 /*----responsive-design----*/
