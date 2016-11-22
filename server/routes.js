@@ -1,3 +1,3 @@
 module.exports = {
-  'api/movie': require('./controllers/MovieController')
+  'movie': require('./controllers/MovieController')
 };
