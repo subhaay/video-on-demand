@@ -9,13 +9,13 @@
  */
 angular.module('videoServiceApp')
   .factory('MovieService', function ($http) {
-    var host = 'http://10.0.1.110:8000';
+    var host = 'http://localhost:8000/api';
     return {
       all : function() {
         return $http.get(host + '/movie');
       },
       getbyId : function(id) {
-        return $http.get(host + '/movie/', id);
+        return $http.get(host + '/movie/' + id);
       }
     }
   });

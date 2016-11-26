@@ -18,7 +18,7 @@ angular.module('videoServiceApp')
 
       MovieService.getbyId($routeParams.id)
         .success(function (data) {
-          $scope.movie = data[0];
+          $scope.movie = data;
         })
         .error(function (err) {
           $scope.errors.push(err.toString());

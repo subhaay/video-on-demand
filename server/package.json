@@ -10,6 +10,7 @@
   "license": "NPL",
   "dependencies": {
     "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
     "express": "^4.14.0",
     "lodash": "^4.16.6",
     "method-override": "^2.3.6",

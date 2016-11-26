@@ -33,19 +33,36 @@
             <vg-media vg-src="movie.sources"
                       vg-tracks="movie.tracks">
             </vg-media>
-            <vg-controls>
+
+            <vg-controls vg-autohide='true' vg-autohide-time="5000">
               <vg-play-pause-button></vg-play-pause-button>
-              <vg-time-display>{{currentTime | date:'mm:ss'}}</vg-time-display>
+              <vg-time-display>{{ currentTime | mstohhmmss }}</vg-time-display>
               <vg-scrub-bar>
                 <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
               </vg-scrub-bar>
-              <vg-time-display>{{timeLeft | date:'mm:ss'}}</vg-time-display>
+              <vg-chromecast-button></vg-chromecast-button>
+              <vg-time-display>{{ timeLeft | mstohhmmss }}</vg-time-display>
               <vg-volume>
                 <vg-mute-button></vg-mute-button>
                 <vg-volume-bar></vg-volume-bar>
               </vg-volume>
+              <vg-playback-button></vg-playback-button>
               <vg-fullscreen-button></vg-fullscreen-button>
             </vg-controls>
+
+            <!--<vg-controls>-->
+              <!--<vg-play-pause-button></vg-play-pause-button>-->
+              <!--<vg-time-display>{{currentTime | date:'mm:ss'}}</vg-time-display>-->
+              <!--<vg-scrub-bar>-->
+                <!--<vg-scrub-bar-current-time></vg-scrub-bar-current-time>-->
+              <!--</vg-scrub-bar>-->
+              <!--<vg-time-display>{{timeLeft | date:'mm:ss'}}</vg-time-display>-->
+              <!--<vg-volume>-->
+                <!--<vg-mute-button></vg-mute-button>-->
+                <!--<vg-volume-bar></vg-volume-bar>-->
+              <!--</vg-volume>-->
+              <!--<vg-fullscreen-button></vg-fullscreen-button>-->
+            <!--</vg-controls>-->
 
             <vg-overlay-play></vg-overlay-play>
             <vg-poster vg-url='movie.plugins.poster'></vg-poster>
@@ -81,22 +98,6 @@
           <li><a href="#"><img src="images/pintrest.png" title="pintrest">Pintrest</a></li>
           <li><a href="#"><img src="images/rss.png" title="rss">Rss</a></li>
         </ul>
-      </div>
-      <div class="artical-commentbox">
-        <h3>leave a comment</h3>
-        <div class="table-form">
-          <form>
-            <input type="text" class="textbox" value="Name:" onfocus="this.value = '';"
-                   onblur="if (this.value == '') {this.value = 'Name';}">
-            <input type="text" class="textbox" value="Email:" onfocus="this.value = '';"
-                   onblur="if (this.value == '') {this.value = 'Email';}">
-            <input type="text" class="textbox" value="Phone:" onfocus="this.value = '';"
-                   onblur="if (this.value == '') {this.value = 'Phone';}">
-            <textarea value="Message:" onfocus="this.value = '';"
-                      onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
-          </form>
-          <a href="#">submit comment</a>
-        </div>
       </div>
     </div>
   </div>

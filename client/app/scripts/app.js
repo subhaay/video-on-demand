@@ -10,21 +10,23 @@
  */
 angular
   .module('videoServiceApp', [
-    "ngRoute", "ngSanitize", 'restangular',
+    "ngRoute", "ngSanitize", 'restangular', 'angularValidator',
     "com.2fdevs.videogular",
     "com.2fdevs.videogular.plugins.controls",
     "com.2fdevs.videogular.plugins.overlayplay",
-    "com.2fdevs.videogular.plugins.poster"
+    "com.2fdevs.videogular.plugins.poster",
+    'com.benjipott.videogular.plugins.chromecast'
   ])
   .config(function ($routeProvider, RestangularProvider) {
     // Set the base URL for Restangular.
-    RestangularProvider.setBaseUrl('http://localhost:8000');
+    RestangularProvider.setBaseUrl('http://localhost:8000/api');
 
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        templateUrl: 'views/login.html',
+        controller: 'LoginCtrl',
+        controllerAs: 'login'
+
       })
       .when('/about', {
         templateUrl: 'views/about.html',
@@ -50,6 +52,16 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/home', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl',
+        controllerAs: 'signup'
       })
       .otherwise({
         redirectTo: '/'
