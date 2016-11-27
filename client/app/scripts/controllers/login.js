@@ -20,6 +20,7 @@ angular.module('videoServiceApp')
           if(data[0].password != $scope.form.password) {
             $scope.errors.push("Enter a valid email address and password..");
           } else {
+            $rootScope.showSignIn = false;
             $location.path('home');
           }
         })

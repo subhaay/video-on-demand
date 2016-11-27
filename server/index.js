@@ -32,9 +32,9 @@ mongoose.connection.once('open', function () {
         app.use(route, controller);
     });
 
-    /*app.listen(8000, '0.0.0.0', function () {
+    app.listen(8000, '0.0.0.0', function () {
         console.log('Listening to port:  ' + 8000);
-    });*/
-    app.listen(8000);
-    console.log('Listening to port:  ' + 8000);
+    });
+    /*app.listen(8000);
+    console.log('Listening to port:  ' + 8000);*/
 });

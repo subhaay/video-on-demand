@@ -7,8 +7,8 @@
  * # UserService
  * Factory in the videoServiceApp.
  */
-angular.module('videoServiceApp').factory('User', ['$http', function($http) {
-  var host = 'http://localhost:8000/api';
+angular.module('videoServiceApp').factory('User', ['$http', '$rootScope', function($http, $rootScope) {
+  var host = $rootScope.SERVICE_URL;
   return {
     get : function(email) {
       return $http.get(host + '/user/' + email);

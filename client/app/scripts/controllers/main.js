@@ -8,7 +8,7 @@
  * Controller of the videoServiceApp
  */
 angular.module('videoServiceApp')
-  .controller('MainCtrl', function ($scope, Movie, MovieService) {
+  .controller('MainCtrl', function ($rootScope, $scope, $location, Movie, MovieService) {
 
     $scope.movies = [];
     $scope.errors = [];
@@ -16,13 +16,18 @@ angular.module('videoServiceApp')
     $scope.init = init();
 
     function init() {
-      MovieService.all()
-        .success(function (data) {
-          $scope.movies = data;
-        })
-        .error(function (err) {
-          $scope.errors.push(err.toString());
-        });
+      if($rootScope.loginEmail) {
+        MovieService.all()
+          .success(function (data) {
+            $scope.movies = data;
+          })
+          .error(function (err) {
+            $scope.errors.push(err.toString());
+          });
+      } else {
+        $scope.errors.push("Please Login before viewing any contents..");
+        $location.path('/');
+      }
     }
 
   });

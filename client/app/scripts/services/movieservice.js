@@ -8,8 +8,8 @@
  * Factory in the videoServiceApp.
  */
 angular.module('videoServiceApp')
-  .factory('MovieService', function ($http) {
-    var host = 'http://localhost:8000/api';
+  .factory('MovieService', ['$http', '$rootScope', function ($http, $rootScope) {
+    var host = $rootScope.SERVICE_URL;
     return {
       all : function() {
         return $http.get(host + '/movie');
@@ -18,4 +18,4 @@ angular.module('videoServiceApp')
         return $http.get(host + '/movie/' + id);
       }
     }
-  });
+  }]);
