@@ -32,11 +32,8 @@ mongoose.connection.once('open', function () {
         app.use(route, controller);
     });
 
-    app.listen(8000, '0.0.0.0', function () {
-        console.log('Listening to port:  ' + 8000);
-    });
-    /*app.listen(8000);
-    console.log('Listening to port:  ' + 8000);*/
+    app.listen(8000);
+    console.log('Listening to port:  ' + 8000);
 });
 
-app.use(express.static(__dirname + '/client/app')); // set the static files location /public/img will be /img for users
+app.use(express.static(__dirname + '/client')); // set the static files location /public/img will be /img for users
