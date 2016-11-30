@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var movie = require('../models/Movie.js');
+var movie = require('./Movie.js');
 
 /* GET /item listing. */
 router.get('/', function(req, res, next) {
