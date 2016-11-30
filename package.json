@@ -4,7 +4,7 @@
   "description": "video streaming service on demand",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "apokhrel",
   "license": "NPL",

@@ -32,8 +32,20 @@ mongoose.connection.once('open', function () {
         app.use(route, controller);
     });
 
-    app.listen(8000);
-    console.log('Listening to port:  ' + 8000);
 });
 
+
+app.set('port', (process.env.PORT || 5000));
+
 app.use(express.static(__dirname + '/client')); // set the static files location /public/img will be /img for users
+
+
+app.get('/', function(request, response) {
+    response.render('client/index');
+});
+
+app.listen(app.get('port'), function() {
+    console.log('Node app is running on port', app.get('port'));
+});
+
+
