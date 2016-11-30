@@ -5,5 +5,5 @@ angular.module('videoServiceApp').run(runBlock);
 
 /** @ngInject */
 function runBlock($rootScope) {
-  $rootScope.SERVICE_URL = 'http://192.168.1.155:8000/api';
+  $rootScope.SERVICE_URL = 'http://10.0.1.110:8000/api';
 }

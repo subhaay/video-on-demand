@@ -915,7 +915,7 @@ body {
 .contact-form input[type="text"], input[type="email"], input[type="password"], .contact-form textarea {
   padding: 8px;
   display: block;
-  width: 95%;
+  width: 100%;
   border: none;
   outline: none;
   color: #464646;
@@ -1028,7 +1028,7 @@ body {
   }
 
   .contact-form input[type="text"], input[type="email"], input[type="password"], .contact-form textarea {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -1054,7 +1054,7 @@ body {
   }
 
   .contact-form input[type="text"], input[type="email"], input[type="password"], .contact-form textarea {
-    width: 95%;
+    width: 100%;
   }
 }
 
@@ -1116,6 +1116,10 @@ body {
     width: 44%;
   }
 
+  .search-box {
+    width: 80%;
+  }
+
   .search input[type="text"] {
     width: 76.5%;
   }
@@ -1154,6 +1158,10 @@ body {
 
   .search {
     width: 33%;
+  }
+
+  .search-box {
+    width: 80%;
   }
 
   .search input[type="text"] {
@@ -1251,6 +1259,12 @@ body {
 .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
   color: #a22828;
   padding-top: 5px;
+}
+
+.navbar-form .form-control {
+  display: inline-block;
+  width: 80%;
+  vertical-align: middle;
 }
 
 /*@media (min-width: 1200px) {
