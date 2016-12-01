@@ -4,7 +4,8 @@
   "description": "video streaming service on demand",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "postinstall": "bower install"
   },
   "author": "apokhrel",
   "license": "NPL",
