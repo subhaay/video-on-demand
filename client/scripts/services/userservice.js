@@ -11,10 +11,10 @@ angular.module('videoServiceApp').factory('User', ['$http', '$rootScope', functi
   var host = $rootScope.SERVICE_URL;
   return {
     get : function(email) {
-      return $http.get(host + '/user/' + email);
+      return $http.get('/api/user/' + email);
     },
     create : function(user) {
-      return $http.post(host + '/user', user);
+      return $http.post('/api/user', user);
     }
   }
 

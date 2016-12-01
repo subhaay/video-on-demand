@@ -12,10 +12,10 @@ angular.module('videoServiceApp')
     var host = $rootScope.SERVICE_URL;
     return {
       all : function() {
-        return $http.get(host + '/movie');
+        return $http.get('/api/movie');
       },
       getbyId : function(id) {
-        return $http.get(host + '/movie/' + id);
+        return $http.get('/api/movie/' + id);
       }
     }
   }]);
