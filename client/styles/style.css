@@ -1252,6 +1252,49 @@ body {
   overflow: hidden;
 }
 
+/*input.button-add {
+  background-image: url(../images/videoCast.png); !* 16px x 16px *!
+  background-color: transparent; !* make the button transparent *!
+  background-repeat: no-repeat;  !* make the background image appear only once *!
+  background-position: 0px 0px;  !* equivalent to 'top left' *!
+  border: none;           !* assuming we don't want any borders *!
+  cursor: pointer;        !* make the cursor like hovering over an <a> element *!
+  height: 16px;           !* make this the size of your image *!
+  padding-left: 16px;     !* make text start to the right of the image *!
+  vertical-align: middle; !* align the text vertically centered *!
+}
+
+
+
+vg-chromecast-button.iconButton {
+  color: #FFFFFF;
+  background-image: url(../images/videoCast.png); !* 16px x 16px *!
+  font-family: 'videogular';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  background: none;
+  padding: 6px;
+  border: none;
+}*/
+
+videogular vg-chromecast-button,
+[videogular] vg-chromecast-button {
+  display: table-cell;
+  width: 45px;
+  background-color: transparent; /* make the button transparent */
+  background-repeat: no-repeat;  /* make the background image appear only once */
+  background-position: 0px 0px;  /* equivalent to 'top left' */
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
 .login-signup-now {
   color: #777;
 }

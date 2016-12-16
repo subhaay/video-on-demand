@@ -30,9 +30,11 @@
       <div class="video-inner">
         <div class="videogular-container">
           <videogular vg-theme="movie.theme">
-            <vg-media vg-src="movie.sources"
+            <vg-media vg-src="movie.sources" vg-chromecast="2CF10F54" title="test" description="a simple video cast"
                       vg-tracks="movie.tracks">
             </vg-media>
+
+            <vg-poster vg-url='movie.plugins.poster'></vg-poster>
 
             <vg-controls vg-autohide='true' vg-autohide-time="1000">
               <vg-play-pause-button></vg-play-pause-button>
@@ -41,12 +43,11 @@
                 <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
               </vg-scrub-bar>
               <vg-time-display>{{ timeLeft | mstohhmmss }}</vg-time-display>
+              <vg-chromecast-button></vg-chromecast-button>
               <vg-volume>
                 <vg-mute-button></vg-mute-button>
                 <vg-volume-bar></vg-volume-bar>
               </vg-volume>
-              <vg-playback-button></vg-playback-button>
-              <vg-chromecast-button></vg-chromecast-button>
               <vg-fullscreen-button></vg-fullscreen-button>
             </vg-controls>
 
