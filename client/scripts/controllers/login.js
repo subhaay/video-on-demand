@@ -13,8 +13,11 @@ angular.module('videoServiceApp')
     $scope.errors = [];
 
     $scope.signIn = function () {
+
+      $location.path('home');
+
       $scope.errors = [];
-      User.get($scope.form.email)
+      /*User.get($scope.form.email)
         .success(function (data) {
           $rootScope.loginEmail = data[0].email;
           if(data[0].password != $scope.form.password) {
@@ -26,7 +29,7 @@ angular.module('videoServiceApp')
         })
         .error(function (err) {
           $scope.errors.push(err.toString());
-        });
+        });*/
     };
 
   });
