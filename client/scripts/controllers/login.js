@@ -15,17 +15,17 @@ angular.module('videoServiceApp')
     $scope.signIn = function () {
       $scope.errors = [];
       User.getUserByEmail($scope.form.email)
-        .success(function (data) {
+        .then(function (greeting) {
+          var data = greeting.data;
           $rootScope.loginEmail = data[0].email;
-          if(data[0].password != $scope.form.password) {
+          if (data[0].password != $scope.form.password) {
             $scope.errors.push("Enter a valid email address and password..");
           } else {
             $rootScope.showSignIn = false;
             $location.path('home');
           }
-        })
-        .error(function (err) {
-          $scope.errors.push(err.toString());
+        }, function (reason) {
+          $scope.errors.push(reason.toString());
         });
     };
 

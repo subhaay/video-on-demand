@@ -18,11 +18,10 @@ angular.module('videoServiceApp')
 
       if($rootScope.loginEmail) {
         MovieService.getbyId($routeParams.id)
-          .success(function (data) {
-            $scope.movie = data;
-          })
-          .error(function (err) {
-            $scope.errors.push(err.toString());
+          .then(function(greeting) {
+            $scope.movie = greeting.data;
+          }, function(reason) {
+            $scope.errors.push(reason.toString());
           });
       } else {
         $scope.errors.push("Please Login before viewing any contents..");

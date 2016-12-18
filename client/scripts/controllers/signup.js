@@ -20,12 +20,10 @@ angular.module('videoServiceApp')
       };
 
       User.createUser(user)
-        .success(function(data) {
-          console.log("Data:" + data);
+        .then(function(greeting) {
           $location.path('#/');
-        })
-        .error(function (err) {
-          $scope.errors.push(err.toString());
+        }, function(reason) {
+          $scope.errors.push(reason.toString());
         });
     };
 
