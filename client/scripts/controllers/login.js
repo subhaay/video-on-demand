@@ -14,7 +14,7 @@ angular.module('videoServiceApp')
 
     $scope.signIn = function () {
       $scope.errors = [];
-      User.get($scope.form.email)
+      User.getUserByEmail($scope.form.email)
         .success(function (data) {
           $rootScope.loginEmail = data[0].email;
           if(data[0].password != $scope.form.password) {

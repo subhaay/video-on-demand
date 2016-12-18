@@ -19,7 +19,7 @@ angular.module('videoServiceApp')
         "password": $scope.form.password
       };
 
-      User.create(user)
+      User.createUser(user)
         .success(function(data) {
           console.log("Data:" + data);
           $location.path('#/');
