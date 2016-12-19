@@ -17,7 +17,7 @@ angular
     "com.2fdevs.videogular.plugins.poster",
     'com.benjipott.videogular.plugins.chromecast'
   ])
-  .config(function ($routeProvider, RestangularProvider) {
+  .config(function ($routeProvider, $locationProvider, RestangularProvider) {
     // Set the base URL for Restangular.
     RestangularProvider.setBaseUrl('http://localhost:8000/api');
 
@@ -66,4 +66,9 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
+    $locationProvider.html5Mode({
+      enabled: true,
+      requireBase: false
+    });
   });
