@@ -20,137 +20,16 @@
     </div>
     <div class="content-grids">
 
-     <!-- <div ng-repeat="movie in movies">
-        <div class="content-grid" ng-if="$index % 4 != 0">
-          <a href="/#/movie/{{movie._id}}"><img src="{{movie.thumbnail}}" title="{{movie.title}}"/></a>
-          <ul>
-            <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-            <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-            <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-          </ul>
-          <a class="button" href="/#/movie/{{movie._id}}">Watch now</a>
-        </div>
-        <div class="content-grid last-grid" ng-if="$index % 4 == 0">
-          <a href="/#/movie/{{movie._id}}"><img src="{{movie.thumbnail}}" title="{{movie.title}}"/></a>
-          <ul>
-            <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-            <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-            <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-          </ul>
-          <a class="button" href="/#/movie/{{movie._id}}">Watch now</a>
-        </div>
-
-      </div>-->
-
       <div ng-class="{ 'content-grid last-grid': ($index +1) % 4 == 0, 'content-grid': ($index+1) % 4 != 0 }" ng-repeat="movie in movies">
-        <a href="/#/movie/{{movie._id}}"><img src="{{movie.thumbnail}}" title="{{movie.title}}"/></a>
+        <a ui-sref="movie({ movieId:  movie._id})"><img src="{{movie.thumbnail}}" title="{{movie.title}}"/></a>
         <ul>
           <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
           <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
           <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
         </ul>
-        <a class="button" href="/#/movie/{{movie._id}}">Watch now</a>
+        <a class="button" ui-sref="movie({ movieId: movie._id })">Watch now</a>
       </div>
 
-     <!-- <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum2.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum3.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid last-grid">
-        <a href="#/movie"><img src="images/gridallbum4.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum5.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum6.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum7.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid last-grid">
-        <a href="#/movie"><img src="images/gridallbum8.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum9.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum10.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid">
-        <a href="#/movie"><img src="images/gridallbum11.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>
-      <div class="content-grid last-grid">
-        <a href="#/movie"><img src="images/gridallbum1.png" title="allbum-name"/></a>
-        <ul>
-          <li><a href="#"><img src="images/likes.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/views.png" title="image-name"/></a></li>
-          <li><a href="#"><img src="images/link.png" title="image-name"/></a></li>
-        </ul>
-        <a class="button" href="singlepage.html">Watch now</a>
-      </div>-->
       <div class="clear"></div>
       <!---start-pagenation----->
       <div class="pagenation">

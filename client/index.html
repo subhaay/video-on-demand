@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Video on Demand</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -27,7 +27,7 @@
 
 
     <div class="container">
-    <div ng-view=""></div>
+    <div ui-view=""></div>
     </div>
 
     <div class="footer">
@@ -57,15 +57,14 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/videogular/videogular.js"></script>
     <script src="bower_components/videogular-controls/vg-controls.js"></script>
     <script src="bower_components/videogular-buffering/vg-buffering.js"></script>
     <script src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>
     <script src="bower_components/videogular-poster/vg-poster.js"></script>
     <script src="bower_components/lodash/lodash.js"></script>
-    <script src="bower_components/restangular/dist/restangular.js"></script>
     <script src="bower_components/bower-videogular-chromecast/dist/videogular-chromecast.min.js"></script>
     <script src="bower_components/tg-angular-validator/dist/angular-validator.js"></script>
     <!-- endbower -->
@@ -82,8 +81,6 @@
         <script src="scripts/controllers/categories.js"></script>
         <script src="scripts/directives/youtube.js"></script>
         <script src="scripts/filters/trusted.js"></script>
-        <script src="scripts/services/movierestangular.js"></script>
-        <script src="scripts/services/movie.js"></script>
         <script src="scripts/services/movieservice.js"></script>
         <script src="scripts/filters/mstohhmmss.js"></script>
         <script src="scripts/controllers/login.js"></script>

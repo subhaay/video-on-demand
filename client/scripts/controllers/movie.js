@@ -8,7 +8,7 @@
  * Controller of the videoServiceApp
  */
 angular.module('videoServiceApp')
-  .controller('MovieCtrl', function ($rootScope, $scope, $sce, $routeParams, $location, Movie, MovieService) {
+  .controller('MovieCtrl', function ($rootScope, $scope, $state, $sce, $stateParams, MovieService) {
     $scope.movie = {};
     $scope.errors = [];
 
@@ -17,7 +17,7 @@ angular.module('videoServiceApp')
     function init() {
 
       if($rootScope.loginEmail) {
-        MovieService.getbyId($routeParams.id)
+        MovieService.getbyId($stateParams.movieId)
           .then(function(greeting) {
             $scope.movie = greeting.data;
           }, function(reason) {
@@ -25,7 +25,7 @@ angular.module('videoServiceApp')
           });
       } else {
         $scope.errors.push("Please Login before viewing any contents..");
-        $location.path('/');
+        $state.go('login');
       }
 
     }

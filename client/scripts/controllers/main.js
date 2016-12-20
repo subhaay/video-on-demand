@@ -8,7 +8,7 @@
  * Controller of the videoServiceApp
  */
 angular.module('videoServiceApp')
-  .controller('MainCtrl', function ($rootScope, $scope, $location, Movie, MovieService) {
+  .controller('MainCtrl', function ($rootScope, $scope, $state, $location, MovieService) {
 
     $scope.movies = [];
     $scope.errors = [];
@@ -25,7 +25,7 @@ angular.module('videoServiceApp')
           });
       } else {
         $scope.errors.push("Please Login before viewing any contents..");
-        $location.path('/');
+        $state.go('login');
       }
     }
 

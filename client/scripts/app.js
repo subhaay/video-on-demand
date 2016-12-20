@@ -10,62 +10,62 @@
  */
 angular
   .module('videoServiceApp', [
-    "ngRoute", "ngSanitize", 'restangular', 'angularValidator',
+    "ngSanitize", "ui.router", 'angularValidator',
     "com.2fdevs.videogular",
     "com.2fdevs.videogular.plugins.controls",
     "com.2fdevs.videogular.plugins.overlayplay",
     "com.2fdevs.videogular.plugins.poster",
     'com.benjipott.videogular.plugins.chromecast'
   ])
-  .config(function ($routeProvider, $locationProvider, RestangularProvider) {
-    // Set the base URL for Restangular.
-    RestangularProvider.setBaseUrl('http://localhost:8000/api');
+  .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    $routeProvider
-      .when('/', {
+    $stateProvider
+
+      .state('login', {
+        url: '/',
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl',
         controllerAs: 'login'
-
       })
-      .when('/about', {
+      .state('about', {
+        url: '/about',
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
-      .when('/movie/:id', {
-        templateUrl: 'views/movie.html',
-        controller: 'MovieCtrl',
-        controllerAs: 'movie'
-      })
-      .when('/contact', {
+      .state('contact', {
+        url: '/contact',
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl',
         controllerAs: 'contact'
       })
-      .when('/categories', {
-        templateUrl: 'views/categories.html',
-        controller: 'CategoriesCtrl',
-        controllerAs: 'categories'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/home', {
+      .state('home', {
+        url: '/home',
         templateUrl: 'views/main.html',
         controller: 'MainCtrl',
-        controllerAs: 'main'
+        controllerAs: 'main',
+
       })
-      .when('/signup', {
+      .state('signup', {
+        url: '/signup',
         templateUrl: 'views/signup.html',
         controller: 'SignupCtrl',
         controllerAs: 'signup'
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('categories', {
+        url: '/categories',
+        templateUrl: 'views/categories.html',
+        controller: 'CategoriesCtrl',
+        controllerAs: 'categories'
+      })
+      .state('movie', {
+        url: '/movie?movieId',
+        templateUrl: 'views/movie.html',
+        controller: 'MovieCtrl',
+        controllerAs: 'movie'
       });
+
+    $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode({
       enabled: true,

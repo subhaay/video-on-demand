@@ -8,7 +8,7 @@
  * Controller of the videoServiceApp
  */
 angular.module('videoServiceApp')
-  .controller('SignupCtrl', function ($scope, User, $location) {
+  .controller('SignupCtrl', function ($scope, $state, User, $location) {
     $scope.form = {};
     $scope.errors = [];
 
@@ -21,7 +21,7 @@ angular.module('videoServiceApp')
 
       User.createUser(user)
         .then(function(greeting) {
-          $location.path('#/');
+          $state.go('login');
         }, function(reason) {
           $scope.errors.push(reason.toString());
         });

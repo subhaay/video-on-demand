@@ -8,7 +8,7 @@
  * Controller of the videoServiceApp
  */
 angular.module('videoServiceApp')
-  .controller('LoginCtrl', function ($rootScope, $scope, User, $location) {
+  .controller('LoginCtrl', function ($rootScope, $scope, User, $location, $state) {
     $scope.form = {};
     $scope.errors = [];
 
@@ -22,7 +22,7 @@ angular.module('videoServiceApp')
             $scope.errors.push("Enter a valid email address and password..");
           } else {
             $rootScope.showSignIn = false;
-            $location.path('home');
+            $state.go('home');
           }
         }, function (reason) {
           $scope.errors.push(reason.toString());

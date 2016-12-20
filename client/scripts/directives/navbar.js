@@ -15,7 +15,7 @@ angular.module('videoServiceApp')
       controllerAs: 'nbc'
     };
     /** @ngInject */
-    function NavbarController($scope, $rootScope, $location) {
+    function NavbarController($scope, $rootScope, $location, $state) {
       var vm = this;
       if ($rootScope.loginEmail) {
         $rootScope.showSignIn = false;
@@ -33,7 +33,7 @@ angular.module('videoServiceApp')
       $scope.checkout = function() {
         $rootScope.loginEmail = undefined;
         $rootScope.showSignIn = true;
-        $location.path('/');
+        $state.go('login');
       }
 
       init();
