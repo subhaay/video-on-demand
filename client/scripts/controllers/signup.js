@@ -23,7 +23,7 @@ angular.module('videoServiceApp')
         .then(function(greeting) {
           $state.go('login');
         }, function(reason) {
-          $scope.errors.push(reason.toString());
+          $scope.errors.push(reason.data.toString());
         });
     };
 

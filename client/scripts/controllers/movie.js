@@ -21,7 +21,7 @@ angular.module('videoServiceApp')
           .then(function(greeting) {
             $scope.movie = greeting.data;
           }, function(reason) {
-            $scope.errors.push(reason.toString());
+            $scope.errors.push(reason.data.toString());
           });
       } else {
         $scope.errors.push("Please Login before viewing any contents..");

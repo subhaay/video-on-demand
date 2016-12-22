@@ -25,7 +25,7 @@ angular.module('videoServiceApp')
             $state.go('home');
           }
         }, function (reason) {
-          $scope.errors.push(reason.toString());
+          $scope.errors.push(reason.data.toString());
         });
     };
 
